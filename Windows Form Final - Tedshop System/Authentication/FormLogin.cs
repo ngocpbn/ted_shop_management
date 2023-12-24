@@ -8,17 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
+using Windows_Form_Final___Tedshop_System.Repository;
 
 namespace Windows_Form_Final___Tedshop_System
 {
     public partial class FormLogin : Form
     {
+ 
+        IAppRepository appRepository = new AppRepository();
+
         public FormLogin()
         {
             InitializeComponent();
         }
-
 
 
         private void FormLogin_Load(object sender, EventArgs e)
@@ -45,44 +47,30 @@ namespace Windows_Form_Final___Tedshop_System
             }
         }
 
-        static string constr = "Data Source=(localdb)\\tedshopdb;Initial Catalog=authetication_tedShopSystem;Integrated Security=True";
-        static SqlConnection con = new SqlConnection(constr);
 
         private void Button_Login_Submit_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (con.State == ConnectionState.Closed)
+                
+                int result = appRepository.Login(txtUsername.Text, txtPassword.Text);
+                if (result == 200)
                 {
-                    con.Open();
+                    MessageBox.Show("Login Successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                string query = "select u_fullname, u_password from Users where u_username = '" + txtUsername.Text + " ' ";
-                SqlCommand cmd = new SqlCommand(query, con);
-                SqlDataReader sdr = cmd.ExecuteReader();
 
-                if (sdr.HasRows)
+                if (result == -1)
                 {
-                    sdr.Read();
-                    if (sdr["u_password"].Equals(txtPassword.Text))
-                    {
-                        MessageBox.Show("Login Successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Password is incorrect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    MessageBox.Show("Password is incorrect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else
+                if (result == -2)
                 {
                     MessageBox.Show("Username is incorrect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                con.Close();
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                if (result == -3)
+                {
+                    MessageBox.Show("Connection Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+
         }
 
         private void label1_Click(object sender, EventArgs e)
