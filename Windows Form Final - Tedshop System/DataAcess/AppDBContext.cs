@@ -1,25 +1,27 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
+using Microsoft.Extensions.Configuration;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Windows_Form_Final___Tedshop_System.BusinessObjects;
- 
+
+
 namespace Windows_Form_Final___Tedshop_System.DataAcess
 {
     internal class AppDBContext : DbContext
     {
         SqlConnection _connection;
         SqlCommand _command;
-        string ConnectionString = @"Data Source=OLIVIA\SQLEXPRESS;Initial Catalog=tedShopSystem;Integrated Security=True";
+  
+        static string ConnectionString()
+        {
+            string ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["TedShopDB"].ConnectionString;
+            return ConnectionString;
+        }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(ConnectionString);
+            optionsBuilder.UseSqlServer(ConnectionString());
         }
 
         // Use Singleton pattern
@@ -45,7 +47,7 @@ namespace Windows_Form_Final___Tedshop_System.DataAcess
         public virtual DbSet<Supplier> Suppliers { get; set; }
 
         public int Login(string username, string password) { 
-            _connection = new SqlConnection(ConnectionString);  
+            _connection = new SqlConnection(ConnectionString());  
             string query = "select u_fullname, u_password from Users where u_username = '" + username + " ' ";
         
             _command = new SqlCommand(query, _connection);
