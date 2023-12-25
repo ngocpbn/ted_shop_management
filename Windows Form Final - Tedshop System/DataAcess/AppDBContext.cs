@@ -1,18 +1,20 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using System.Configuration;
+using Microsoft.Extensions.Logging;
 using System.Data;
 using System.Data.SqlClient;
 using Windows_Form_Final___Tedshop_System.BusinessObjects;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 
 namespace Windows_Form_Final___Tedshop_System.DataAcess
 {
-    internal class AppDBContext : DbContext
+    public class AppDBContext : DbContext
     {
         SqlConnection _connection;
         SqlCommand _command;
-  
+        
+
+
         static string ConnectionString()
         {
             string ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["TedShopDB"].ConnectionString;
@@ -63,6 +65,7 @@ namespace Windows_Form_Final___Tedshop_System.DataAcess
                     reader.Read();
                     if (reader["u_password"].Equals(password))
                     {
+                        SearchForProductsByName("teddy");
                         return 200; // Login Successful
                     }
                     else
@@ -80,5 +83,124 @@ namespace Windows_Form_Final___Tedshop_System.DataAcess
                 return -3; // Connection Error
             }
         }
+
+        public List<Product> GetAllProducts()
+        {
+            List<Product> allProducts = new List<Product>();
+            _connection = new SqlConnection(ConnectionString());
+            string query = "select * from Product";
+            _command = new SqlCommand(query, _connection);
+            SqlDataReader reader;
+            try
+            {
+                if (_connection.State == ConnectionState.Closed)
+                {
+                    _connection.Open();
+                }
+                reader = _command.ExecuteReader();
+            }
+
+            catch
+            {
+                _connection.Close();
+                return allProducts;
+            }
+
+            while (reader.Read())
+            {
+
+                Product product = new Product
+                {
+                    ProductID = reader.GetInt32("Product_ID"),
+                    Name = reader.GetString("Name"),
+                    Description = reader.GetString("Description"),
+                    Price = reader.GetDecimal("Price"),
+                    Stock = reader.GetInt32("Stock"),
+                    SupplierID = reader.GetInt32("Supplier_ID")
+                };
+                allProducts.Add(product);
+            }
+            _connection.Close();
+            return allProducts;
+        }
+
+        public Product GetProductByID(int productID)
+        {
+            _connection = new SqlConnection(ConnectionString());
+            string query = $"select * from Product where Product_ID = {productID}";
+            _command = new SqlCommand(query, _connection);
+            SqlDataReader reader;
+            try
+            {
+                if (_connection.State == ConnectionState.Closed)
+                {
+                    _connection.Open();
+                }
+                reader = _command.ExecuteReader();
+            }catch
+            {
+                _connection.Close();
+                return new Product();
+            }
+
+            Product product = new Product();
+             while (reader.Read())
+            {
+
+                 product = new Product
+                {
+                    ProductID = reader.GetInt32("Product_ID"),
+                    Name = reader.GetString("Name"),
+                    Description = reader.GetString("Description"),
+                    Price = reader.GetDecimal("Price"),
+                    Stock = reader.GetInt32("Stock"),
+                    SupplierID = reader.GetInt32("Supplier_ID")
+                };
+               
+            }
+            _connection.Close();
+            return product;
+        }
+
+        public List<Product> SearchForProductsByName(string name)
+        {
+            List<Product> allProducts = new List<Product>();
+            _connection = new SqlConnection(ConnectionString());
+            string query = $"select * from Product where Name like '%{name}%'" ;
+            _command = new SqlCommand(query, _connection);
+            SqlDataReader reader;
+            try
+            {
+                if (_connection.State == ConnectionState.Closed)
+                {
+                    _connection.Open();
+                }
+                reader = _command.ExecuteReader();
+            }
+            catch
+            {
+                _connection.Close();
+                return allProducts;
+            }
+
+            while (reader.Read())
+            {
+
+                Product product = new Product
+                {
+                    ProductID = reader.GetInt32("Product_ID"),
+                    Name = reader.GetString("Name"),
+                    Description = reader.GetString("Description"),
+                    Price = reader.GetDecimal("Price"),
+                    Stock = reader.GetInt32("Stock"),
+                    SupplierID = reader.GetInt32("Supplier_ID")
+                };
+                allProducts.Add(product);
+            }
+            _connection.Close();
+            return allProducts;
+        }
+
+
     }
 }

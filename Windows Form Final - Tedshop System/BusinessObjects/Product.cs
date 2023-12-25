@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Windows_Form_Final___Tedshop_System.BusinessObjects
 {
-    internal class Product
+    public class Product
     {
         public int ProductID {  get; set; }
         public string Name { get; set; }
