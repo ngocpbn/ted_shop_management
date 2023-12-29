@@ -14,7 +14,7 @@ namespace Windows_Form_Final___Tedshop_System
 {
     public partial class FormLogin : Form
     {
- 
+
         IAppRepository appRepository = new AppRepository();
 
         public FormLogin()
@@ -50,25 +50,25 @@ namespace Windows_Form_Final___Tedshop_System
 
         private void Button_Login_Submit_Click(object sender, EventArgs e)
         {
-                
-                int result = appRepository.Login(txtUsername.Text, txtPassword.Text);
-                if (result == 200)
-                {
-                    MessageBox.Show("Login Successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
 
-                if (result == -1)
-                {
-                    MessageBox.Show("Password is incorrect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                if (result == -2)
-                {
-                    MessageBox.Show("Username is incorrect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                if (result == -3)
-                {
-                    MessageBox.Show("Connection Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+            int result = appRepository.Login(txtUsername.Text, txtPassword.Text);
+            if (result == 200)
+            {
+                MessageBox.Show("Login Successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            if (result == -1)
+            {
+                MessageBox.Show("Password is incorrect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (result == -2)
+            {
+                MessageBox.Show("Username is incorrect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (result == -3)
+            {
+                MessageBox.Show("Connection Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
 
         }
@@ -84,6 +84,11 @@ namespace Windows_Form_Final___Tedshop_System
         }
 
         private void txtAge_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

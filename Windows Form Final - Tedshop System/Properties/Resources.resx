@@ -118,19 +118,79 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="cat_cage_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cat_cage_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bg-image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\bg-image.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bg-image2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\bg-image.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bg-image3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\bg-image.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="download" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bg-image1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\bg-image.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cat_cage_301px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cat_cage_301px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Capture3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Capture3.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO2.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bg-image4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\bg-image.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Capture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Capture.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bg-image3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\bg-image.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="customer_301px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\customer_301px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO1.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Capture2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Capture2.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="us_dollar_301px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\us_dollar_301px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pexels-burst-374898" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pexels-burst-374898.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Capture1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Capture1.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="group_301px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\group_301px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bg-image5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg-image.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1375595-200" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1375595-200.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logout_301px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logout_301px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Capture4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Capture4.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="istockphoto-1400388586-612x612" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\istockphoto-1400388586-612x612.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

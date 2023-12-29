@@ -1,3 +1,5 @@
+using Windows_Form_Final___Tedshop_System.Views.Dashboard;
+
 namespace Windows_Form_Final___Tedshop_System
 {
     internal static class Program
@@ -9,7 +11,7 @@ namespace Windows_Form_Final___Tedshop_System
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new FormLogin());
+            Application.Run(new Dashboard());
         }
     }
 }
