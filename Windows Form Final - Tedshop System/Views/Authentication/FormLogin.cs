@@ -9,13 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using Windows_Form_Final___Tedshop_System.Repository;
+using Windows_Form_Final___Tedshop_System.BusinessObjects;
+using Windows_Form_Final___Tedshop_System.DataAcess;
 
 namespace Windows_Form_Final___Tedshop_System
 {
     public partial class FormLogin : Form
     {
  
-        IAppRepository appRepository = new AppRepository();
+        IUserRepository userRepository = new UserRepository();
 
         public FormLogin()
         {
@@ -50,8 +52,11 @@ namespace Windows_Form_Final___Tedshop_System
 
         private void Button_Login_Submit_Click(object sender, EventArgs e)
         {
-                
-                int result = appRepository.Login(txtUsername.Text, txtPassword.Text);
+            Users user = new Users { 
+                u_username = txtUsername.Text,
+                u_password = txtPassword.Text
+            };
+                int result = userRepository.Login(user);
                 if (result == 200)
                 {
                     MessageBox.Show("Login Successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);

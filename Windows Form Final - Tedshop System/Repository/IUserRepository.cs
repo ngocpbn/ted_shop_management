@@ -8,12 +8,9 @@ using Windows_Form_Final___Tedshop_System.DataAcess;
 
 namespace Windows_Form_Final___Tedshop_System.Repository
 {
-    public interface IAppRepository
+    public interface IUserRepository
     {
-        int Login(string username, string password);
-        List<Product> GetProductList();
+        int Login(Users user);
 
-        Product GetProductByID(int productID);
-        List<Product> SearchForProductsByName(string name);
     }
 }
