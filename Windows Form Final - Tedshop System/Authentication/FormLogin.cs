@@ -26,8 +26,6 @@ namespace Windows_Form_Final___Tedshop_System
 
         }
 
-
-
         private void Btn_close_Click(object sender, EventArgs e)
         {
             var window = MessageBox.Show(
@@ -98,6 +96,11 @@ namespace Windows_Form_Final___Tedshop_System
         private void txtAge_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Clear();
         }
     }
 }

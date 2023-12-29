@@ -57,6 +57,7 @@
             button2.TabIndex = 21;
             button2.Text = "CLEAR";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // Button_Login_Submit
             // 
