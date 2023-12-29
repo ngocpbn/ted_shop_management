@@ -9,9 +9,12 @@ namespace Windows_Form_Final___Tedshop_System.Repository
 {
     public interface IBearRepository
     {
-        List<Product> GetProductList();
+        List<Product> GetAllProducts();
 
-        Product GetProductByID(int productID);
+        Product? GetProductByID(int productID);
         List<Product> SearchForProductsByName(string name);
+        int AddNewProduct(Product product);
+        int UpdateExistingProduct(Product product);
+        int DeleteProducts(List<Product> products);
     }
 }

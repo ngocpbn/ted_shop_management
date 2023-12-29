@@ -10,8 +10,12 @@ namespace Windows_Form_Final___Tedshop_System.Repository
 {
     public class BearRepository : IBearRepository
     {
+        public List<Product> GetAllProducts() => AppDBContext.Instance.GetAllProducts();
+        public Product? GetProductByID(int productID) => AppDBContext.Instance.GetProductByID(productID);
         public List<Product> SearchForProductsByName(string name) => AppDBContext.Instance.SearchForProductsByName(name);
-        public Product GetProductByID(int productID) => AppDBContext.Instance.GetProductByID(productID);
-        public List<Product> GetProductList() => AppDBContext.Instance.GetAllProducts();
+        public int AddNewProduct(Product product) => AppDBContext.Instance.AddNewProduct(product);
+        public int UpdateExistingProduct(Product product) => AppDBContext.Instance.UpdateExistingProduct(product);  
+        public int DeleteProducts(List<Product> products) => AppDBContext.Instance.DeleteProducts(products); 
+        //Can delete many bears at once
     }
 }

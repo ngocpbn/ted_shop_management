@@ -63,10 +63,64 @@ namespace Windows_Form_Final___Tedshop_System.DataAcess
             return -1;  // Incorrect password
         }
 
+        public int Register(Users user)
+        {
+            try
+            {
+                Instance.Users.Add(user);
+                Instance.SaveChanges();
+            }
+            catch (Exception ex) {
+                System.Diagnostics.Debug.WriteLine(ex.Message);
+                return -1;
+            }
 
+            return 1;
+        }
+
+        public int UpdateUser(Users user)
+        {
+            try
+            {
+                Instance.Users.Update(user);
+                Instance.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex.Message);
+                return -1;
+            }
+            return 1;
+        }
+
+        public int DeleteUser(Users user)
+        {
+            try
+            {
+                Instance.Users.Remove(user);
+                Instance.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                System.Diagnostics.Debug.WriteLine(e.Message);
+                return -1;
+            }
+            return 1;
+        }
         
         public List<Product> GetAllProducts() => Instance.Product.ToList();
-        public Product GetProductByID(int productID) => Instance.Product.Single(product => product.Product_ID == productID);
+        public Product? GetProductByID(int productID)
+        {
+            try
+            {
+                return Instance.Product.Single(product => product.Product_ID == productID); 
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex.Message);
+                return null;
+            }
+        }
         public List<Product> SearchForProductsByName(string name) => Instance.Product.Where(product => product.Name.Contains(name)).ToList();
         public int AddNewProduct(Product product)
         {
@@ -118,6 +172,60 @@ namespace Windows_Form_Final___Tedshop_System.DataAcess
             return 1;
         }
 
+        public List<Supplier> GetAllSuppliers() => Instance.Supplier.ToList();
+        public Supplier? GetSupplierByID(int id)
+        {
+            try
+            {
+                return Instance.Supplier.Single(supplier => supplier.Supplier_ID.Equals(id));
+            }
+            catch (Exception e) {
+                System.Diagnostics.Debug.WriteLine(e.Message);
+                return null;
+            }
+        }
+        public List<Supplier> SearchForSupplierByName(string name)  => Instance.Supplier.Where(supplier => supplier.Name.Contains(name)).ToList();
+        public int AddNewSupplier(Supplier supplier) {
+            try
+            {
+                Instance.Supplier.Add(supplier);
+                Instance.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                System.Diagnostics.Debug.WriteLine(e.Message);
+                return -1;
+            }
+            return 1;
+        }
+
+        public int UpdateSupplier(Supplier supplier) {
+            try
+            {
+                Instance.Supplier.Update(supplier);
+                Instance.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                System.Diagnostics.Debug.WriteLine(e.Message);
+                return -1;
+            }
+            return 1;
+        }
+
+        public int DeleteSupplier(Supplier supplier)
+        {
+            try
+            {
+                Instance.Supplier.Remove(supplier);
+                Instance.SaveChanges(); 
+            }
+            catch (Exception e) {
+                System.Diagnostics.Debug.WriteLine(e.Message);
+                return -1;
+            }
+            return 1;
+        }
     }
 }
 
