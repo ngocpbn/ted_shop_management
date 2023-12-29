@@ -9,13 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using Windows_Form_Final___Tedshop_System.Repository;
+using Windows_Form_Final___Tedshop_System.BusinessObjects;
+using Windows_Form_Final___Tedshop_System.DataAcess;
 
 namespace Windows_Form_Final___Tedshop_System
 {
     public partial class FormLogin : Form
     {
 
-        IAppRepository appRepository = new AppRepository();
+ 
+        IUserRepository userRepository = new UserRepository();
+
 
         public FormLogin()
         {
@@ -51,24 +55,29 @@ namespace Windows_Form_Final___Tedshop_System
         private void Button_Login_Submit_Click(object sender, EventArgs e)
         {
 
-            int result = appRepository.Login(txtUsername.Text, txtPassword.Text);
-            if (result == 200)
-            {
-                MessageBox.Show("Login Successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            Users user = new Users { 
+                u_username = txtUsername.Text,
+                u_password = txtPassword.Text
+            };
+                int result = userRepository.Login(user);
+                if (result == 200)
+                {
+                    MessageBox.Show("Login Successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
 
-            if (result == -1)
-            {
-                MessageBox.Show("Password is incorrect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            if (result == -2)
-            {
-                MessageBox.Show("Username is incorrect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            if (result == -3)
-            {
-                MessageBox.Show("Connection Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                if (result == -1)
+                {
+                    MessageBox.Show("Password is incorrect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                if (result == -2)
+                {
+                    MessageBox.Show("Username is incorrect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                if (result == -3)
+                {
+                    MessageBox.Show("Connection Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
 
 
         }

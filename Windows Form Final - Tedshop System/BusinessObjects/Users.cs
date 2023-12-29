@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,11 +9,20 @@ namespace Windows_Form_Final___Tedshop_System.BusinessObjects
 {
     public class Users
     {
-        public int? UserID { get; set; } 
-        public string? FullName { get; set; }    
-        public  int? Age { get; set; }
-        public string? Email { get; set; }
-        public string Username { get; set; }
-        public string Password { get; set; }
+        [Key]
+        public int? u_id { get; set; }
+
+        [StringLength(50)]
+        public string? u_fullname { get; set; }    
+        public  int? u_age { get; set; }
+
+        [StringLength(50)]
+        public string? u_email { get; set; }
+
+        [StringLength(50)]
+        public string u_username { get; set; }
+
+        [StringLength(50)]
+        public string u_password { get; set; }
     }
 }

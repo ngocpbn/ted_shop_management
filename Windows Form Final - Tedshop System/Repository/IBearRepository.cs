@@ -4,16 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Windows_Form_Final___Tedshop_System.BusinessObjects;
-using Windows_Form_Final___Tedshop_System.DataAcess;
 
 namespace Windows_Form_Final___Tedshop_System.Repository
 {
-    public interface IAppRepository
+    public interface IBearRepository
     {
-        int Login(string username, string password);
-        List<Product> GetProductList();
+        List<Product> GetAllProducts();
 
-        Product GetProductByID(int productID);
+        Product? GetProductByID(int productID);
         List<Product> SearchForProductsByName(string name);
+        int AddNewProduct(Product product);
+        int UpdateExistingProduct(Product product);
+        int DeleteProducts(List<Product> products);
     }
 }
