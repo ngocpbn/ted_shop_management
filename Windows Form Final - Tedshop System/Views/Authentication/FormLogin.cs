@@ -16,8 +16,10 @@ namespace Windows_Form_Final___Tedshop_System
 {
     public partial class FormLogin : Form
     {
+
  
         IUserRepository userRepository = new UserRepository();
+
 
         public FormLogin()
         {
@@ -52,6 +54,7 @@ namespace Windows_Form_Final___Tedshop_System
 
         private void Button_Login_Submit_Click(object sender, EventArgs e)
         {
+
             Users user = new Users { 
                 u_username = txtUsername.Text,
                 u_password = txtPassword.Text
@@ -76,6 +79,7 @@ namespace Windows_Form_Final___Tedshop_System
                 }
 
 
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -89,6 +93,11 @@ namespace Windows_Form_Final___Tedshop_System
         }
 
         private void txtAge_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
