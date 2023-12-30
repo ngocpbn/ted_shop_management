@@ -9,6 +9,7 @@ namespace Windows_Form_Final___Tedshop_System.Repository
 {
     public interface IBearRepository
     {
+        List<Product> SearchProductSByNameSizeCate(string name, string size = "", string cate = "");
         List<Product> GetAllProducts();
 
         Product? GetProductByID(int productID);

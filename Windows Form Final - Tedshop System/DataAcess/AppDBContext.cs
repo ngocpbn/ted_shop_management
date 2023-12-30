@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using Windows_Form_Final___Tedshop_System.BusinessObjects;
@@ -57,7 +58,7 @@ namespace Windows_Form_Final___Tedshop_System.DataAcess
             }
 
             if (usr.u_password.Equals(user.u_password))
-            {   
+            {
                 return 200;     // Login Successful
             }
 
@@ -123,6 +124,24 @@ namespace Windows_Form_Final___Tedshop_System.DataAcess
             }
         }
         public List<Product> SearchForProductsByName(string name) => Instance.Product.Where(product => product.Name.Contains(name)).ToList();
+
+        public List<Product> SearchProductSByNameSizeCate (string name, string size = "", string cate = "") {
+           
+            if (size == "" && cate == "")
+            {
+                return SearchForProductsByName(name);
+            }
+            if (size != "" && cate == "")
+            {
+                return Instance.Product.Where(product => product.Name.Contains(name) && product.Size.Contains(size)).ToList(); ;
+            }
+            if (cate != "" && size == "")
+            {
+                return Instance.Product.Where(product => product.Name.Contains(name) && product.Category.Contains(cate)).ToList(); ;
+            }
+
+            return Instance.Product.Where(product => product.Name.Contains(name) && product.Size.Contains(size) && product.Category.Contains(cate)).ToList();
+        }
         public int AddNewProduct(Product product)
         {
             try
