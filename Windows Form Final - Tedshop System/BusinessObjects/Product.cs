@@ -21,5 +21,7 @@ namespace Windows_Form_Final___Tedshop_System.BusinessObjects
         public decimal Price { get; set; }
         public int Stock { get; set; }
         public int Supplier_ID { get; set; }
+        public string Size { get; set; }    
+        public string Category { get; set; }
     }
 }
