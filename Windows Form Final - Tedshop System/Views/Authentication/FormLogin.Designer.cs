@@ -31,7 +31,7 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             bindingSource1 = new BindingSource(components);
-            button2 = new Button();
+            btnClear = new Button();
             Button_Login_Submit = new Button();
             checkbxShowPassword = new CheckBox();
             txtPassword = new TextBox();
@@ -46,17 +46,18 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // button2
+            // btnClear
             // 
-            button2.Cursor = Cursors.Hand;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.FromArgb(116, 86, 174);
-            button2.Location = new Point(675, 496);
-            button2.Name = "button2";
-            button2.Size = new Size(216, 35);
-            button2.TabIndex = 21;
-            button2.Text = "CLEAR";
-            button2.UseVisualStyleBackColor = false;
+            btnClear.Cursor = Cursors.Hand;
+            btnClear.FlatStyle = FlatStyle.Flat;
+            btnClear.ForeColor = Color.FromArgb(116, 86, 174);
+            btnClear.Location = new Point(675, 496);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(216, 35);
+            btnClear.TabIndex = 21;
+            btnClear.Text = "CLEAR";
+            btnClear.UseVisualStyleBackColor = false;
+            btnClear.Click += btnClear_Click;
             // 
             // Button_Login_Submit
             // 
@@ -84,6 +85,7 @@
             checkbxShowPassword.TabIndex = 19;
             checkbxShowPassword.Text = "Show Password";
             checkbxShowPassword.UseVisualStyleBackColor = true;
+            checkbxShowPassword.CheckedChanged += checkbxShowPassword_CheckedChanged;
             // 
             // txtPassword
             // 
@@ -96,6 +98,7 @@
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(216, 28);
             txtPassword.TabIndex = 16;
+            txtPassword.TextChanged += txtPassword_TextChanged;
             // 
             // label3
             // 
@@ -137,7 +140,6 @@
             label1.Size = new Size(271, 48);
             label1.TabIndex = 12;
             label1.Text = "Get Started";
-            label1.Click += label1_Click;
             // 
             // BtnCloseLogin
             // 
@@ -159,7 +161,6 @@
             pictureBox1.Size = new Size(482, 750);
             pictureBox1.TabIndex = 25;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
             // FormLogin
             // 
@@ -169,7 +170,7 @@
             BackgroundImage = Properties.Resources.bg_image3;
             ClientSize = new Size(1020, 662);
             Controls.Add(BtnCloseLogin);
-            Controls.Add(button2);
+            Controls.Add(btnClear);
             Controls.Add(Button_Login_Submit);
             Controls.Add(checkbxShowPassword);
             Controls.Add(txtPassword);
@@ -195,7 +196,7 @@
         #endregion
 
         private BindingSource bindingSource1;
-        private Button button2;
+        private Button btnClear;
         private Button Button_Login_Submit;
         private CheckBox checkbxShowPassword;
         private TextBox txtPassword;

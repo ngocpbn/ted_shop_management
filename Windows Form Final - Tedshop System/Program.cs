@@ -11,7 +11,7 @@ namespace Windows_Form_Final___Tedshop_System
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new ProductForm());
+            Application.Run(new FormLogin());
         }
     }
 }

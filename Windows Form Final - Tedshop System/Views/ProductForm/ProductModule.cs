@@ -17,10 +17,18 @@ namespace Windows_Form_Final___Tedshop_System.Views.ProductForm
 
         private Product currentProduct;
 
-        IBearRepository bearRepository = new BearRepository();
+        private IBearRepository bearRepository = new BearRepository();
+        private ISupplierRepository supplierRepository = new SupplierRepository();
         public ProductModule(Product product)
         {
             InitializeComponent();
+
+            // Populate the Supplier dropdown
+            supplierRepository = new SupplierRepository(); // Initialize the repository if not already done
+            List<Supplier> suppliers = supplierRepository.GetAllSuppliers();
+            txtSupplier.DataSource = suppliers;
+            txtSupplier.DisplayMember = "Name"; // Assuming 'Name' is the property in Supplier class
+            txtSupplier.ValueMember = "Supplier_ID"; // Assuming 'Supplier_ID' is the property in Supplier class
 
             if (product != null)
             {
@@ -28,6 +36,7 @@ namespace Windows_Form_Final___Tedshop_System.Views.ProductForm
                 txtDescription.Text = product.Description;
                 txtPrice.Text = product.Price.ToString();
                 txtStock.Text = product.Stock.ToString();
+                txtSupplier.SelectedValue = product.Supplier_ID;
             }
 
             currentProduct = product;
@@ -78,6 +87,11 @@ namespace Windows_Form_Final___Tedshop_System.Views.ProductForm
 
         }
 
+        private void txtSupplier_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             // Validate inputs
@@ -104,6 +118,11 @@ namespace Windows_Form_Final___Tedshop_System.Views.ProductForm
                 MessageBox.Show("Invalid stock. Please enter a valid number.");
                 return;
             }
+            if (txtSupplier.SelectedIndex < 0)
+            {
+                MessageBox.Show("Please select a supplier.");
+                return;
+            }
 
             DialogResult confirmResult = MessageBox.Show("Are you sure you want to create this product?",
                                                                     "Confirm Create", MessageBoxButtons.YesNo);
@@ -116,6 +135,7 @@ namespace Windows_Form_Final___Tedshop_System.Views.ProductForm
                     Description = txtDescription.Text,
                     Price = price,
                     Stock = stock,
+                    Supplier_ID = (int)txtSupplier.SelectedValue
                 };
 
                 // Add the new product
@@ -165,6 +185,12 @@ namespace Windows_Form_Final___Tedshop_System.Views.ProductForm
                 MessageBox.Show("Invalid stock. Please enter a valid number.");
                 return;
             }
+            if (txtSupplier.SelectedIndex < 0)
+            {
+                MessageBox.Show("Please select a supplier.");
+                return;
+            }
+
             DialogResult confirmResult = MessageBox.Show("Are you sure you want to update this product?",
                                                                    "Confirm Update", MessageBoxButtons.YesNo);
             if (confirmResult == DialogResult.Yes)
@@ -174,6 +200,7 @@ namespace Windows_Form_Final___Tedshop_System.Views.ProductForm
                 currentProduct.Description = txtDescription.Text;
                 currentProduct.Price = price;
                 currentProduct.Stock = stock;
+                currentProduct.Supplier_ID = (int)txtSupplier.SelectedValue;
 
                 // Update the product
                 int result = bearRepository.UpdateExistingProduct(currentProduct);
@@ -190,6 +217,6 @@ namespace Windows_Form_Final___Tedshop_System.Views.ProductForm
             }
         }
 
-
+        
     }
 }

@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductModule));
             panel1 = new Panel();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
@@ -51,6 +51,8 @@
             btnUpdate = new Guna.UI2.WinForms.Guna2Button();
             btnCancel = new Guna.UI2.WinForms.Guna2Button();
             btnClose = new PictureBox();
+            label6 = new Label();
+            txtSupplier = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)btnClose).BeginInit();
             SuspendLayout();
             // 
@@ -124,6 +126,7 @@
             // 
             txtName.Location = new Point(197, 98);
             txtName.Name = "txtName";
+            txtName.PlaceholderText = "Enter name";
             txtName.Size = new Size(578, 23);
             txtName.TabIndex = 6;
             txtName.TextChanged += txtName_TextChanged;
@@ -132,6 +135,7 @@
             // 
             txtDescription.Location = new Point(197, 147);
             txtDescription.Name = "txtDescription";
+            txtDescription.PlaceholderText = "Enter Description";
             txtDescription.Size = new Size(578, 23);
             txtDescription.TabIndex = 7;
             txtDescription.TextChanged += txtDescription_TextChanged;
@@ -140,6 +144,7 @@
             // 
             txtPrice.Location = new Point(197, 193);
             txtPrice.Name = "txtPrice";
+            txtPrice.PlaceholderText = "Enter Price";
             txtPrice.Size = new Size(578, 23);
             txtPrice.TabIndex = 8;
             txtPrice.TextChanged += txtPrice_TextChanged;
@@ -148,6 +153,7 @@
             // 
             txtStock.Location = new Point(197, 239);
             txtStock.Name = "txtStock";
+            txtStock.PlaceholderText = "Enter Stock";
             txtStock.Size = new Size(578, 23);
             txtStock.TabIndex = 9;
             txtStock.TextChanged += txtStock_TextChanged;
@@ -155,7 +161,7 @@
             // btnSave
             // 
             btnSave.BorderRadius = 15;
-            btnSave.CustomizableEdges = customizableEdges5;
+            btnSave.CustomizableEdges = customizableEdges11;
             btnSave.DisabledState.BorderColor = Color.DarkGray;
             btnSave.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSave.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -164,7 +170,7 @@
             btnSave.ForeColor = Color.White;
             btnSave.Location = new Point(63, 339);
             btnSave.Name = "btnSave";
-            btnSave.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnSave.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btnSave.Size = new Size(180, 45);
             btnSave.TabIndex = 10;
             btnSave.Text = "Save";
@@ -173,7 +179,7 @@
             // btnUpdate
             // 
             btnUpdate.BorderRadius = 15;
-            btnUpdate.CustomizableEdges = customizableEdges3;
+            btnUpdate.CustomizableEdges = customizableEdges9;
             btnUpdate.DisabledState.BorderColor = Color.DarkGray;
             btnUpdate.DisabledState.CustomBorderColor = Color.DarkGray;
             btnUpdate.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -183,7 +189,7 @@
             btnUpdate.ForeColor = Color.White;
             btnUpdate.Location = new Point(330, 339);
             btnUpdate.Name = "btnUpdate";
-            btnUpdate.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnUpdate.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnUpdate.Size = new Size(180, 45);
             btnUpdate.TabIndex = 11;
             btnUpdate.Text = "Update";
@@ -192,7 +198,7 @@
             // btnCancel
             // 
             btnCancel.BorderRadius = 15;
-            btnCancel.CustomizableEdges = customizableEdges1;
+            btnCancel.CustomizableEdges = customizableEdges7;
             btnCancel.DisabledState.BorderColor = Color.DarkGray;
             btnCancel.DisabledState.CustomBorderColor = Color.DarkGray;
             btnCancel.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -202,7 +208,7 @@
             btnCancel.ForeColor = Color.White;
             btnCancel.Location = new Point(595, 339);
             btnCancel.Name = "btnCancel";
-            btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnCancel.Size = new Size(180, 45);
             btnCancel.TabIndex = 12;
             btnCancel.Text = "Cancel";
@@ -219,11 +225,33 @@
             btnClose.TabStop = false;
             btnClose.Click += btnClose_Click;
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Location = new Point(47, 288);
+            label6.Name = "label6";
+            label6.Size = new Size(74, 20);
+            label6.TabIndex = 26;
+            label6.Text = "Supplier :";
+            // 
+            // txtSupplier
+            // 
+            txtSupplier.FormattingEnabled = true;
+            txtSupplier.Location = new Point(197, 285);
+            txtSupplier.Name = "txtSupplier";
+            txtSupplier.Size = new Size(580, 23);
+            txtSupplier.TabIndex = 27;
+            txtSupplier.Text = "Select Supplier";
+            txtSupplier.SelectedIndexChanged += txtSupplier_SelectedIndexChanged;
+            // 
             // ProductModule
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(txtSupplier);
+            Controls.Add(label6);
             Controls.Add(btnClose);
             Controls.Add(btnCancel);
             Controls.Add(btnUpdate);
@@ -264,5 +292,7 @@
         private Guna.UI2.WinForms.Guna2Button btnUpdate;
         private Guna.UI2.WinForms.Guna2Button btnSave;
         private PictureBox btnClose;
+        private Label label6;
+        private ComboBox txtSupplier;
     }
 }

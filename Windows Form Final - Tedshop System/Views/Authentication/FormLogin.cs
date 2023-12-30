@@ -11,19 +11,21 @@ using System.Data.SqlClient;
 using Windows_Form_Final___Tedshop_System.Repository;
 using Windows_Form_Final___Tedshop_System.BusinessObjects;
 using Windows_Form_Final___Tedshop_System.DataAcess;
+using Windows_Form_Final___Tedshop_System.Views.Dashboard;
 
 namespace Windows_Form_Final___Tedshop_System
 {
     public partial class FormLogin : Form
     {
 
- 
+
         IUserRepository userRepository = new UserRepository();
 
 
         public FormLogin()
         {
             InitializeComponent();
+            txtPassword.PasswordChar = '*';
         }
 
 
@@ -54,52 +56,55 @@ namespace Windows_Form_Final___Tedshop_System
 
         private void Button_Login_Submit_Click(object sender, EventArgs e)
         {
-
-            Users user = new Users { 
+            Users user = new Users
+            {
                 u_username = txtUsername.Text,
                 u_password = txtPassword.Text
             };
-                int result = userRepository.Login(user);
-                if (result == 200)
-                {
-                    MessageBox.Show("Login Successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+            int result = userRepository.Login(user);
+            if (result == 200)
+            {
+                MessageBox.Show("Login Successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                if (result == -1)
-                {
-                    MessageBox.Show("Password is incorrect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                if (result == -2)
-                {
-                    MessageBox.Show("Username is incorrect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                if (result == -3)
-                {
-                    MessageBox.Show("Connection Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                // Hide the login form
+                this.Hide();
 
+                // Create and show the dashboard form
+                Dashboard dashboard = new Dashboard();
+                dashboard.Show();
 
-
+                // Optionally, close the login form if it's no longer needed
+                // this.Close();
+            }
+            else if (result == -1)
+            {
+                MessageBox.Show("Password is incorrect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (result == -2)
+            {
+                MessageBox.Show("Username is incorrect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (result == -3)
+            {
+                MessageBox.Show("Connection Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void label1_Click(object sender, EventArgs e)
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void checkbxShowPassword_CheckedChanged(object sender, EventArgs e)
         {
-
+            txtPassword.PasswordChar = checkbxShowPassword.Checked ? '\0' : '*';
         }
 
-        private void txtAge_TextChanged(object sender, EventArgs e)
+        private void btnClear_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
+            txtUsername.Text = string.Empty;
+            txtPassword.Text = string.Empty;
         }
     }
 }

@@ -31,7 +31,7 @@ namespace Windows_Form_Final___Tedshop_System
             foreach (var product in products)
             {
                 i++;
-                dataGridProducts.Rows.Add(i, product.Product_ID, product.Name, product.Description, product.Price, product.Stock);
+                dataGridProducts.Rows.Add(i, product.Product_ID, product.Name, product.Description, product.Price, product.Stock,product.Supplier_ID);
             }
         }
 

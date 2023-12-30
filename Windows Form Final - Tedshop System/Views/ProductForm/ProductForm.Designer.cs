@@ -59,7 +59,7 @@
             panel1.ForeColor = Color.FromArgb(94, 148, 255);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1000, 13);
+            panel1.Size = new Size(984, 13);
             panel1.TabIndex = 0;
             // 
             // panel2
@@ -69,7 +69,7 @@
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 13);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1000, 55);
+            panel2.Size = new Size(984, 55);
             panel2.TabIndex = 1;
             // 
             // btnAdd
@@ -138,7 +138,7 @@
             dataGridProducts.Name = "dataGridProducts";
             dataGridProducts.RowHeadersVisible = false;
             dataGridProducts.RowTemplate.Height = 25;
-            dataGridProducts.Size = new Size(1000, 232);
+            dataGridProducts.Size = new Size(984, 211);
             dataGridProducts.TabIndex = 5;
             dataGridProducts.CellContentClick += dataGridProducts_CellContentClick;
             // 
@@ -207,7 +207,7 @@
             // ProductForm
             // 
             AutoScaleMode = AutoScaleMode.None;
-            ClientSize = new Size(1000, 300);
+            ClientSize = new Size(984, 279);
             Controls.Add(dataGridProducts);
             Controls.Add(panel2);
             Controls.Add(panel1);
