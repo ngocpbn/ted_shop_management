@@ -14,12 +14,18 @@ namespace Windows_Form_Final___Tedshop_System.BusinessObjects
 
 
         [StringLength(20)]
-        public string Name { get; set; }
+        public string Name { get; set; } = "";
 
         [StringLength(30)]
-        public string Description { get; set; }
-        public decimal Price { get; set; }
-        public int Stock { get; set; }
-        // public int Supplier_ID { get; set; }
+        public string Description { get; set; } = string.Empty;
+        public decimal Price { get; set; } = 0.0m;
+        public int Stock { get; set; } = 0;
+        public int Supplier_ID { get; set; } = 0;
+
+        [StringLength(10)]
+        public string Size { get; set; } = string.Empty;
+
+        [StringLength(30)]
+        public string Category { get; set; } = string.Empty;
     }
 }

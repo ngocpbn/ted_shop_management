@@ -13,7 +13,7 @@ namespace Windows_Form_Final___Tedshop_System.BusinessObjects
         public int Supplier_ID { get; set; }
 
         [StringLength(20)]
-        public string Name { get; set;}
+        public string Name { get; set; } = string.Empty;
 
         [StringLength(25)]
         public string Phone_num { get; set;}
