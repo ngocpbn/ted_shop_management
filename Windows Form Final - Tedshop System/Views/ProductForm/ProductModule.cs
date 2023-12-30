@@ -18,6 +18,7 @@ namespace Windows_Form_Final___Tedshop_System.Views.ProductForm
         private Product currentProduct;
 
         private IBearRepository bearRepository = new BearRepository();
+
         private ISupplierRepository supplierRepository = new SupplierRepository();
         public ProductModule(Product product)
         {
@@ -29,6 +30,19 @@ namespace Windows_Form_Final___Tedshop_System.Views.ProductForm
             txtSupplier.DataSource = suppliers;
             txtSupplier.DisplayMember = "Name"; // Assuming 'Name' is the property in Supplier class
             txtSupplier.ValueMember = "Supplier_ID"; // Assuming 'Supplier_ID' is the property in Supplier class
+
+          
+            txtCategory.Items.AddRange(new object[] { "Cat", "Dog", "Bear", "Pig" });
+            txtCategory.SelectedIndex = 0; // Set "All" as the default selected item
+
+
+            
+            // Add "All" option as the first item for comboBoxSize
+          
+            txtSize.Items.AddRange(new object[] { "M", "S", "L", "XL" });
+            txtSize.SelectedIndex = 0; // Set "All" as the default selected item
+
+
 
             if (product != null)
             {
@@ -123,6 +137,19 @@ namespace Windows_Form_Final___Tedshop_System.Views.ProductForm
                 MessageBox.Show("Please select a supplier.");
                 return;
             }
+           
+            if (txtCategory.SelectedIndex < 0)
+            {
+                MessageBox.Show("Please select a category.");
+                return;
+            }
+            if (txtSize.SelectedIndex < 0)
+            {
+                MessageBox.Show("Please select a size.");
+                return;
+            }
+
+
 
             DialogResult confirmResult = MessageBox.Show("Are you sure you want to create this product?",
                                                                     "Confirm Create", MessageBoxButtons.YesNo);
@@ -135,7 +162,10 @@ namespace Windows_Form_Final___Tedshop_System.Views.ProductForm
                     Description = txtDescription.Text,
                     Price = price,
                     Stock = stock,
-                    Supplier_ID = (int)txtSupplier.SelectedValue
+                    Supplier_ID = (int)txtSupplier.SelectedValue,
+                    Size = txtSize.Text,
+                    Category = txtCategory.Text
+
                 };
 
                 // Add the new product
@@ -217,6 +247,14 @@ namespace Windows_Form_Final___Tedshop_System.Views.ProductForm
             }
         }
 
-        
+        private void txtSize_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void txtCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

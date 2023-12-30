@@ -1,4 +1,5 @@
-using Windows_Form_Final___Tedshop_System.Views.Dashboard;
+using Windows_Form_Final___Tedshop_System.BusinessObjects;
+using Windows_Form_Final___Tedshop_System.Views.SupplierForm;
 
 namespace Windows_Form_Final___Tedshop_System
 {
@@ -11,7 +12,7 @@ namespace Windows_Form_Final___Tedshop_System
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new FormLogin());
+            Application.Run(new SupplierForm());
         }
     }
 }

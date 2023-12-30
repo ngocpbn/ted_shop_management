@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductModule));
             panel1 = new Panel();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
@@ -53,12 +53,16 @@
             btnClose = new PictureBox();
             label6 = new Label();
             txtSupplier = new ComboBox();
+            label7 = new Label();
+            txtSize = new ComboBox();
+            label8 = new Label();
+            txtCategory = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)btnClose).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(94, 148, 255);
+            panel1.BackColor = Color.FromArgb(3, 172, 220);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -86,7 +90,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(47, 101);
+            label2.Location = new Point(47, 86);
             label2.Name = "label2";
             label2.Size = new Size(61, 20);
             label2.TabIndex = 2;
@@ -96,7 +100,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(47, 150);
+            label3.Location = new Point(47, 126);
             label3.Name = "label3";
             label3.Size = new Size(99, 20);
             label3.TabIndex = 3;
@@ -106,7 +110,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(47, 196);
+            label4.Location = new Point(47, 166);
             label4.Name = "label4";
             label4.Size = new Size(54, 20);
             label4.TabIndex = 4;
@@ -116,7 +120,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(47, 242);
+            label5.Location = new Point(47, 207);
             label5.Name = "label5";
             label5.Size = new Size(57, 20);
             label5.TabIndex = 5;
@@ -124,7 +128,7 @@
             // 
             // txtName
             // 
-            txtName.Location = new Point(197, 98);
+            txtName.Location = new Point(195, 83);
             txtName.Name = "txtName";
             txtName.PlaceholderText = "Enter name";
             txtName.Size = new Size(578, 23);
@@ -133,7 +137,7 @@
             // 
             // txtDescription
             // 
-            txtDescription.Location = new Point(197, 147);
+            txtDescription.Location = new Point(195, 123);
             txtDescription.Name = "txtDescription";
             txtDescription.PlaceholderText = "Enter Description";
             txtDescription.Size = new Size(578, 23);
@@ -142,7 +146,7 @@
             // 
             // txtPrice
             // 
-            txtPrice.Location = new Point(197, 193);
+            txtPrice.Location = new Point(195, 163);
             txtPrice.Name = "txtPrice";
             txtPrice.PlaceholderText = "Enter Price";
             txtPrice.Size = new Size(578, 23);
@@ -151,7 +155,7 @@
             // 
             // txtStock
             // 
-            txtStock.Location = new Point(197, 239);
+            txtStock.Location = new Point(195, 204);
             txtStock.Name = "txtStock";
             txtStock.PlaceholderText = "Enter Stock";
             txtStock.Size = new Size(578, 23);
@@ -161,16 +165,16 @@
             // btnSave
             // 
             btnSave.BorderRadius = 15;
-            btnSave.CustomizableEdges = customizableEdges11;
+            btnSave.CustomizableEdges = customizableEdges5;
             btnSave.DisabledState.BorderColor = Color.DarkGray;
             btnSave.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSave.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnSave.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnSave.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnSave.ForeColor = Color.White;
-            btnSave.Location = new Point(63, 339);
+            btnSave.Location = new Point(47, 381);
             btnSave.Name = "btnSave";
-            btnSave.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnSave.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnSave.Size = new Size(180, 45);
             btnSave.TabIndex = 10;
             btnSave.Text = "Save";
@@ -179,7 +183,7 @@
             // btnUpdate
             // 
             btnUpdate.BorderRadius = 15;
-            btnUpdate.CustomizableEdges = customizableEdges9;
+            btnUpdate.CustomizableEdges = customizableEdges3;
             btnUpdate.DisabledState.BorderColor = Color.DarkGray;
             btnUpdate.DisabledState.CustomBorderColor = Color.DarkGray;
             btnUpdate.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -187,9 +191,9 @@
             btnUpdate.FillColor = Color.DarkOrange;
             btnUpdate.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnUpdate.ForeColor = Color.White;
-            btnUpdate.Location = new Point(330, 339);
+            btnUpdate.Location = new Point(311, 381);
             btnUpdate.Name = "btnUpdate";
-            btnUpdate.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnUpdate.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnUpdate.Size = new Size(180, 45);
             btnUpdate.TabIndex = 11;
             btnUpdate.Text = "Update";
@@ -198,7 +202,7 @@
             // btnCancel
             // 
             btnCancel.BorderRadius = 15;
-            btnCancel.CustomizableEdges = customizableEdges7;
+            btnCancel.CustomizableEdges = customizableEdges1;
             btnCancel.DisabledState.BorderColor = Color.DarkGray;
             btnCancel.DisabledState.CustomBorderColor = Color.DarkGray;
             btnCancel.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -206,9 +210,9 @@
             btnCancel.FillColor = Color.DarkGray;
             btnCancel.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnCancel.ForeColor = Color.White;
-            btnCancel.Location = new Point(595, 339);
+            btnCancel.Location = new Point(595, 381);
             btnCancel.Name = "btnCancel";
-            btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnCancel.Size = new Size(180, 45);
             btnCancel.TabIndex = 12;
             btnCancel.Text = "Cancel";
@@ -229,7 +233,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(47, 288);
+            label6.Location = new Point(47, 251);
             label6.Name = "label6";
             label6.Size = new Size(74, 20);
             label6.TabIndex = 26;
@@ -238,18 +242,62 @@
             // txtSupplier
             // 
             txtSupplier.FormattingEnabled = true;
-            txtSupplier.Location = new Point(197, 285);
+            txtSupplier.Location = new Point(195, 248);
             txtSupplier.Name = "txtSupplier";
             txtSupplier.Size = new Size(580, 23);
             txtSupplier.TabIndex = 27;
             txtSupplier.Text = "Select Supplier";
             txtSupplier.SelectedIndexChanged += txtSupplier_SelectedIndexChanged;
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.Location = new Point(47, 294);
+            label7.Name = "label7";
+            label7.Size = new Size(47, 20);
+            label7.TabIndex = 28;
+            label7.Text = "Size  :";
+            // 
+            // txtSize
+            // 
+            txtSize.FormattingEnabled = true;
+            txtSize.Location = new Point(195, 291);
+            txtSize.Name = "txtSize";
+            txtSize.Size = new Size(580, 23);
+            txtSize.TabIndex = 29;
+            txtSize.Text = "Select Size";
+            txtSize.SelectedIndexChanged += txtSize_SelectedIndexChanged;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.Location = new Point(47, 330);
+            label8.Name = "label8";
+            label8.Size = new Size(91, 20);
+            label8.TabIndex = 30;
+            label8.Text = "Category  :";
+            // 
+            // txtCategory
+            // 
+            txtCategory.FormattingEnabled = true;
+            txtCategory.Location = new Point(195, 331);
+            txtCategory.Name = "txtCategory";
+            txtCategory.Size = new Size(580, 23);
+            txtCategory.TabIndex = 31;
+            txtCategory.Text = "Select Category";
+            txtCategory.SelectedIndexChanged += txtCategory_SelectedIndexChanged;
+            // 
             // ProductModule
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(txtCategory);
+            Controls.Add(label8);
+            Controls.Add(txtSize);
+            Controls.Add(label7);
             Controls.Add(txtSupplier);
             Controls.Add(label6);
             Controls.Add(btnClose);
@@ -294,5 +342,9 @@
         private PictureBox btnClose;
         private Label label6;
         private ComboBox txtSupplier;
+        private ComboBox txtCategory;
+        private Label label8;
+        private ComboBox txtSize;
+        private Label label7;
     }
 }
