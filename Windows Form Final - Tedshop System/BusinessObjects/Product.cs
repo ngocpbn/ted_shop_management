@@ -20,6 +20,6 @@ namespace Windows_Form_Final___Tedshop_System.BusinessObjects
         public string Description { get; set; }
         public decimal Price { get; set; }
         public int Stock { get; set; }
-        public int Supplier_ID { get; set; }
+        // public int Supplier_ID { get; set; }
     }
 }

@@ -132,6 +132,10 @@ namespace Windows_Form_Final___Tedshop_System.DataAcess
             catch (Exception e)
             {
                 System.Diagnostics.Debug.WriteLine(e.Message);
+                if (e.InnerException != null)
+                {
+                    System.Diagnostics.Debug.WriteLine($"Inner exception: {e.InnerException.Message}");
+                }
                 return -1;
             }
 

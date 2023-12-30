@@ -28,23 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductForm));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductForm));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panel1 = new Panel();
             panel2 = new Panel();
-            txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             btnAdd = new PictureBox();
+            txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             dataGridProducts = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
+            Product_ID = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
             Column5 = new DataGridViewTextBoxColumn();
             Column6 = new DataGridViewTextBoxColumn();
             Column7 = new DataGridViewTextBoxColumn();
+            Edit = new DataGridViewImageColumn();
+            Delete = new DataGridViewImageColumn();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnAdd).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridProducts).BeginInit();
@@ -70,6 +72,17 @@
             panel2.Size = new Size(1000, 55);
             panel2.TabIndex = 1;
             // 
+            // btnAdd
+            // 
+            btnAdd.Image = (Image)resources.GetObject("btnAdd.Image");
+            btnAdd.Location = new Point(10, 14);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(26, 25);
+            btnAdd.SizeMode = PictureBoxSizeMode.StretchImage;
+            btnAdd.TabIndex = 26;
+            btnAdd.TabStop = false;
+            btnAdd.Click += btnAdd_Click;
+            // 
             // txtSearch
             // 
             txtSearch.BackColor = Color.Transparent;
@@ -94,32 +107,22 @@
             txtSearch.Size = new Size(288, 38);
             txtSearch.TabIndex = 0;
             // 
-            // btnAdd
-            // 
-            btnAdd.Image = (Image)resources.GetObject("btnAdd.Image");
-            btnAdd.Location = new Point(10, 14);
-            btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(26, 25);
-            btnAdd.SizeMode = PictureBoxSizeMode.StretchImage;
-            btnAdd.TabIndex = 26;
-            btnAdd.TabStop = false;
-            // 
             // dataGridProducts
             // 
             dataGridProducts.AllowUserToAddRows = false;
-            dataGridProducts.BackgroundColor = Color.White;
+            dataGridProducts.BackgroundColor = SystemColors.Control;
             dataGridProducts.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.Font = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = SystemColors.Window;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            dataGridViewCellStyle1.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dataGridProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridProducts.ColumnHeadersHeight = 30;
             dataGridProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridProducts.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7 });
+            dataGridProducts.Columns.AddRange(new DataGridViewColumn[] { Column1, Product_ID, Column3, Column4, Column5, Column6, Column7, Edit, Delete });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(3, 172, 220);
             dataGridViewCellStyle2.Font = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
@@ -130,27 +133,28 @@
             dataGridProducts.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridProducts.Dock = DockStyle.Fill;
             dataGridProducts.EnableHeadersVisualStyles = false;
+            dataGridProducts.GridColor = SystemColors.ControlDark;
             dataGridProducts.Location = new Point(0, 68);
             dataGridProducts.Name = "dataGridProducts";
             dataGridProducts.RowHeadersVisible = false;
             dataGridProducts.RowTemplate.Height = 25;
             dataGridProducts.Size = new Size(1000, 232);
             dataGridProducts.TabIndex = 5;
-
+            dataGridProducts.CellContentClick += dataGridProducts_CellContentClick;
             // 
             // Column1
             // 
             Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             Column1.HeaderText = "No";
             Column1.Name = "Column1";
-            Column1.Width = 50;
+            Column1.Width = 53;
             // 
-            // Column2
+            // Product_ID
             // 
-            Column2.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            Column2.HeaderText = "Product ID";
-            Column2.Name = "Column2";
-            Column2.Width = 99;
+            Product_ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Product_ID.HeaderText = "Product ID";
+            Product_ID.Name = "Product_ID";
+            Product_ID.Width = 110;
             // 
             // Column3
             // 
@@ -175,14 +179,30 @@
             Column6.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             Column6.HeaderText = "Stock";
             Column6.Name = "Column6";
-            Column6.Width = 66;
+            Column6.Width = 72;
             // 
             // Column7
             // 
             Column7.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             Column7.HeaderText = "Supplier ID";
             Column7.Name = "Column7";
-            Column7.Width = 98;
+            Column7.Width = 109;
+            // 
+            // Edit
+            // 
+            Edit.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Edit.HeaderText = "";
+            Edit.Image = Properties.Resources.edit_20px;
+            Edit.Name = "Edit";
+            Edit.Width = 5;
+            // 
+            // Delete
+            // 
+            Delete.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Delete.HeaderText = "";
+            Delete.Image = Properties.Resources.Delete_20px;
+            Delete.Name = "Delete";
+            Delete.Width = 5;
             // 
             // ProductForm
             // 
@@ -196,6 +216,7 @@
             Name = "ProductForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ProductForm";
+            Load += ProductForm_Load;
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)btnAdd).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridProducts).EndInit();
@@ -210,11 +231,13 @@
         private PictureBox btnAdd;
         private DataGridView dataGridProducts;
         private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Product_ID;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column7;
+        private DataGridViewImageColumn Edit;
+        private DataGridViewImageColumn Delete;
     }
 }
