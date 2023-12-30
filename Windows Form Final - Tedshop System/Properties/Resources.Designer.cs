@@ -22,7 +22,7 @@ namespace Windows_Form_Final___Tedshop_System.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Windows_Form_Final___Tedshop_System.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Windows_Form_Final___Tedshop_System.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace Windows_Form_Final___Tedshop_System.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,9 +63,9 @@ namespace Windows_Form_Final___Tedshop_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1375595_200 {
+        public static System.Drawing.Bitmap _3d_glasses_10750652 {
             get {
-                object obj = ResourceManager.GetObject("1375595-200", resourceCulture);
+                object obj = ResourceManager.GetObject("3d-glasses_10750652", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,7 +73,7 @@ namespace Windows_Form_Final___Tedshop_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _8 {
+        public static System.Drawing.Bitmap _8 {
             get {
                 object obj = ResourceManager.GetObject("8", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -83,7 +83,27 @@ namespace Windows_Form_Final___Tedshop_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bg_image {
+        public static System.Drawing.Bitmap add_301px {
+            get {
+                object obj = ResourceManager.GetObject("add_301px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap add_30px {
+            get {
+                object obj = ResourceManager.GetObject("add_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap bg_image {
             get {
                 object obj = ResourceManager.GetObject("bg-image", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -93,7 +113,7 @@ namespace Windows_Form_Final___Tedshop_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bg_image1 {
+        public static System.Drawing.Bitmap bg_image1 {
             get {
                 object obj = ResourceManager.GetObject("bg-image1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -103,7 +123,7 @@ namespace Windows_Form_Final___Tedshop_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bg_image2 {
+        public static System.Drawing.Bitmap bg_image2 {
             get {
                 object obj = ResourceManager.GetObject("bg-image2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -113,7 +133,7 @@ namespace Windows_Form_Final___Tedshop_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bg_image3 {
+        public static System.Drawing.Bitmap bg_image3 {
             get {
                 object obj = ResourceManager.GetObject("bg-image3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -123,7 +143,7 @@ namespace Windows_Form_Final___Tedshop_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bg_image4 {
+        public static System.Drawing.Bitmap bg_image4 {
             get {
                 object obj = ResourceManager.GetObject("bg-image4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -133,9 +153,9 @@ namespace Windows_Form_Final___Tedshop_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bg_image5 {
+        public static System.Drawing.Bitmap bird_50px {
             get {
-                object obj = ResourceManager.GetObject("bg-image5", resourceCulture);
+                object obj = ResourceManager.GetObject("bird_50px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +163,9 @@ namespace Windows_Form_Final___Tedshop_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Capture {
+        public static System.Drawing.Bitmap cancel_301px {
             get {
-                object obj = ResourceManager.GetObject("Capture", resourceCulture);
+                object obj = ResourceManager.GetObject("cancel_301px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +173,9 @@ namespace Windows_Form_Final___Tedshop_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Capture1 {
+        public static System.Drawing.Bitmap cancel_30px {
             get {
-                object obj = ResourceManager.GetObject("Capture1", resourceCulture);
+                object obj = ResourceManager.GetObject("cancel_30px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +183,9 @@ namespace Windows_Form_Final___Tedshop_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Capture2 {
+        public static System.Drawing.Bitmap cat_30px {
             get {
-                object obj = ResourceManager.GetObject("Capture2", resourceCulture);
+                object obj = ResourceManager.GetObject("cat_30px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +193,9 @@ namespace Windows_Form_Final___Tedshop_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Capture3 {
+        public static System.Drawing.Bitmap cat_50px {
             get {
-                object obj = ResourceManager.GetObject("Capture3", resourceCulture);
+                object obj = ResourceManager.GetObject("cat_50px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,17 +203,7 @@ namespace Windows_Form_Final___Tedshop_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Capture4 {
-            get {
-                object obj = ResourceManager.GetObject("Capture4", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap cat_cage_301px {
+        public static System.Drawing.Bitmap cat_cage_301px {
             get {
                 object obj = ResourceManager.GetObject("cat_cage_301px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -203,7 +213,7 @@ namespace Windows_Form_Final___Tedshop_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cat_cage_30px {
+        public static System.Drawing.Bitmap cat_cage_30px {
             get {
                 object obj = ResourceManager.GetObject("cat_cage_30px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -213,7 +223,27 @@ namespace Windows_Form_Final___Tedshop_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap customer_301px {
+        public static System.Drawing.Bitmap Check_Circle_20px {
+            get {
+                object obj = ResourceManager.GetObject("Check Circle_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap clown_fish_202px {
+            get {
+                object obj = ResourceManager.GetObject("clown_fish_202px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap customer_301px {
             get {
                 object obj = ResourceManager.GetObject("customer_301px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -223,7 +253,37 @@ namespace Windows_Form_Final___Tedshop_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Delete_20px {
+        public static System.Drawing.Bitmap customer_30px {
+            get {
+                object obj = ResourceManager.GetObject("customer_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap dashboard_layout_301px {
+            get {
+                object obj = ResourceManager.GetObject("dashboard_layout_301px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap dashboard_layout_30px {
+            get {
+                object obj = ResourceManager.GetObject("dashboard_layout_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Delete_20px {
             get {
                 object obj = ResourceManager.GetObject("Delete_20px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -233,7 +293,7 @@ namespace Windows_Form_Final___Tedshop_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Delete_30px {
+        public static System.Drawing.Bitmap Delete_30px {
             get {
                 object obj = ResourceManager.GetObject("Delete_30px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -243,9 +303,9 @@ namespace Windows_Form_Final___Tedshop_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap download {
+        public static System.Drawing.Bitmap Delete_30px1 {
             get {
-                object obj = ResourceManager.GetObject("download", resourceCulture);
+                object obj = ResourceManager.GetObject("Delete_30px1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,7 +313,47 @@ namespace Windows_Form_Final___Tedshop_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap edit_20px {
+        public static System.Drawing.Bitmap dog_100px {
+            get {
+                object obj = ResourceManager.GetObject("dog_100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap dog_50px {
+            get {
+                object obj = ResourceManager.GetObject("dog_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap down_20px {
+            get {
+                object obj = ResourceManager.GetObject("down_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap down_25px {
+            get {
+                object obj = ResourceManager.GetObject("down_25px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap edit_20px {
             get {
                 object obj = ResourceManager.GetObject("edit_20px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -263,7 +363,7 @@ namespace Windows_Form_Final___Tedshop_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap edit_30px {
+        public static System.Drawing.Bitmap edit_30px {
             get {
                 object obj = ResourceManager.GetObject("edit_30px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -273,7 +373,57 @@ namespace Windows_Form_Final___Tedshop_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap group_301px {
+        public static System.Drawing.Bitmap edit_30px1 {
+            get {
+                object obj = ResourceManager.GetObject("edit_30px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap fish_201px {
+            get {
+                object obj = ResourceManager.GetObject("fish_201px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap fish_203px {
+            get {
+                object obj = ResourceManager.GetObject("fish_203px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap fish_20px {
+            get {
+                object obj = ResourceManager.GetObject("fish_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap flying_stork_with_bundle_50px {
+            get {
+                object obj = ResourceManager.GetObject("flying_stork_with_bundle_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap group_301px {
             get {
                 object obj = ResourceManager.GetObject("group_301px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -283,9 +433,9 @@ namespace Windows_Form_Final___Tedshop_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap istockphoto_1400388586_612x612 {
+        public static System.Drawing.Bitmap group_30px {
             get {
-                object obj = ResourceManager.GetObject("istockphoto-1400388586-612x612", resourceCulture);
+                object obj = ResourceManager.GetObject("group_30px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -293,9 +443,9 @@ namespace Windows_Form_Final___Tedshop_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap LOGO {
+        public static System.Drawing.Bitmap icons8_cart_64 {
             get {
-                object obj = ResourceManager.GetObject("LOGO", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8-cart-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -303,9 +453,9 @@ namespace Windows_Form_Final___Tedshop_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap LOGO1 {
+        public static System.Drawing.Bitmap icons8_shiba_inu_32 {
             get {
-                object obj = ResourceManager.GetObject("LOGO1", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8_shiba_inu_32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -313,9 +463,9 @@ namespace Windows_Form_Final___Tedshop_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap LOGO2 {
+        public static System.Drawing.Bitmap kiss_10750741 {
             get {
-                object obj = ResourceManager.GetObject("LOGO2", resourceCulture);
+                object obj = ResourceManager.GetObject("kiss_10750741", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -323,7 +473,7 @@ namespace Windows_Form_Final___Tedshop_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Logout_301px {
+        public static System.Drawing.Bitmap Logout_301px {
             get {
                 object obj = ResourceManager.GetObject("Logout_301px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -333,7 +483,67 @@ namespace Windows_Form_Final___Tedshop_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pexels_burst_374898 {
+        public static System.Drawing.Bitmap Logout_30px {
+            get {
+                object obj = ResourceManager.GetObject("Logout_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap parrot_202px {
+            get {
+                object obj = ResourceManager.GetObject("parrot_202px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap parrot_20px {
+            get {
+                object obj = ResourceManager.GetObject("parrot_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap peacock_20px {
+            get {
+                object obj = ResourceManager.GetObject("peacock_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap peacock_50px {
+            get {
+                object obj = ResourceManager.GetObject("peacock_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap pexels_bill_emrich_230785 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-bill-emrich-230785", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap pexels_burst_374898 {
             get {
                 object obj = ResourceManager.GetObject("pexels-burst-374898", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -343,7 +553,97 @@ namespace Windows_Form_Final___Tedshop_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap shopping_cart__1_ {
+        public static System.Drawing.Bitmap pexels_chevanon_photography_1108099 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-chevanon-photography-1108099", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap pexels_gilberto_reyes_825949 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-gilberto-reyes-825949", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap pic {
+            get {
+                object obj = ResourceManager.GetObject("pic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap polar_bear_13370378 {
+            get {
+                object obj = ResourceManager.GetObject("polar-bear_13370378", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap polar_bear_133703781 {
+            get {
+                object obj = ResourceManager.GetObject("polar-bear_133703781", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap popular_48px {
+            get {
+                object obj = ResourceManager.GetObject("popular_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap sale_50px {
+            get {
+                object obj = ResourceManager.GetObject("sale_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap search_30px {
+            get {
+                object obj = ResourceManager.GetObject("search_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap security_lock_30px {
+            get {
+                object obj = ResourceManager.GetObject("security_lock_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap shopping_cart__1_ {
             get {
                 object obj = ResourceManager.GetObject("shopping-cart (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -353,9 +653,79 @@ namespace Windows_Form_Final___Tedshop_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap us_dollar_301px {
+        public static System.Drawing.Bitmap teddy_5065436 {
+            get {
+                object obj = ResourceManager.GetObject("teddy_5065436", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap tropical_fish_20px {
+            get {
+                object obj = ResourceManager.GetObject("tropical_fish_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap up_20px {
+            get {
+                object obj = ResourceManager.GetObject("up_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap up_25px {
+            get {
+                object obj = ResourceManager.GetObject("up_25px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap us_dollar_301px {
             get {
                 object obj = ResourceManager.GetObject("us_dollar_301px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap us_dollar_30px {
+            get {
+                object obj = ResourceManager.GetObject("us_dollar_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap user_30px {
+            get {
+                object obj = ResourceManager.GetObject("user_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap x_icon_150997 {
+            get {
+                object obj = ResourceManager.GetObject("x_icon_150997", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

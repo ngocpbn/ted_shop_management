@@ -23,7 +23,7 @@ namespace Windows_Form_Final___Tedshop_System.Views.Dashboard
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-
+            openChildForm(new DashboardUI());
         }
 
         private void BtnClose_Click(object sender, EventArgs e)
@@ -44,7 +44,7 @@ namespace Windows_Form_Final___Tedshop_System.Views.Dashboard
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new DashboardUI());
         }
 
 
@@ -96,6 +96,11 @@ namespace Windows_Form_Final___Tedshop_System.Views.Dashboard
         }
 
         private void numberUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
         {
 
         }
