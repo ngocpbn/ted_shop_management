@@ -10,7 +10,7 @@ namespace Windows_Form_Final___Tedshop_System.Repository
 {
     public class UserRepository : IUserRepository
     {
-
+        public List<Users> GetAllUsers() => AppDBContext.Instance.GetAllUsers();
         public int Login(Users user) => AppDBContext.Instance.Login(user);
         int IUserRepository.Register(Users user) => AppDBContext.Instance.Register(user);
         int IUserRepository.UpdateUser(Users user) => AppDBContext.Instance.UpdateUser(user);

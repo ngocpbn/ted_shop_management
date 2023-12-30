@@ -44,6 +44,7 @@ namespace Windows_Form_Final___Tedshop_System.DataAcess
         public virtual DbSet<Supplier> Supplier { get; set; }
         public virtual DbSet<Users> Users { get; set; }
 
+        public List<Users> GetAllUsers() => Instance.Users.ToList();
         public int Login(Users user) {
             Users usr;
             try

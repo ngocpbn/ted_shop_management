@@ -10,6 +10,7 @@ namespace Windows_Form_Final___Tedshop_System.Repository
 {
     public interface IUserRepository
     {
+        List<Users> GetAllUsers();
         int Login(Users user);
         int Register(Users user);
         int UpdateUser(Users user);
