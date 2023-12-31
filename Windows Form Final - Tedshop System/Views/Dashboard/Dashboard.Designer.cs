@@ -30,19 +30,20 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel2 = new Panel();
+            panel6 = new Panel();
             panel9 = new Panel();
             panel8 = new Panel();
             label3 = new Label();
@@ -54,6 +55,8 @@
             btnProducts = new Guna.UI2.WinForms.Guna2Button();
             btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             panel1 = new Panel();
+            textNameUser = new Label();
+            pictureBox1 = new PictureBox();
             label1 = new Label();
             imageList1 = new ImageList(components);
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
@@ -63,7 +66,6 @@
             panel4 = new Panel();
             panelContainerForm = new Panel();
             panel5 = new Panel();
-            pictureBox1 = new PictureBox();
             label4 = new Label();
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
@@ -73,8 +75,8 @@
             ((System.ComponentModel.ISupportInitialize)BtnClose).BeginInit();
             panel3.SuspendLayout();
             panel1.SuspendLayout();
-            panelContainerForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panelContainerForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -83,6 +85,7 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(panel6);
             panel2.Controls.Add(panel9);
             panel2.Controls.Add(panel8);
             panel2.Controls.Add(label3);
@@ -92,6 +95,15 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(1190, 59);
             panel2.TabIndex = 1;
+            // 
+            // panel6
+            // 
+            panel6.BackColor = Color.FromArgb(3, 172, 220);
+            panel6.Dock = DockStyle.Bottom;
+            panel6.Location = new Point(0, 50);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(1190, 9);
+            panel6.TabIndex = 27;
             // 
             // panel9
             // 
@@ -118,7 +130,6 @@
             label3.Size = new Size(611, 38);
             label3.TabIndex = 3;
             label3.Text = "Welcome to Teddy Shop Management";
-            label3.UseWaitCursor = true;
             // 
             // BtnClose
             // 
@@ -148,7 +159,7 @@
             // btnLogout
             // 
             btnLogout.BorderRadius = 10;
-            btnLogout.CustomizableEdges = customizableEdges25;
+            btnLogout.CustomizableEdges = customizableEdges1;
             btnLogout.DisabledState.BorderColor = Color.DarkGray;
             btnLogout.DisabledState.CustomBorderColor = Color.DarkGray;
             btnLogout.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -158,15 +169,16 @@
             btnLogout.Image = Properties.Resources.Logout_301px;
             btnLogout.Location = new Point(12, 546);
             btnLogout.Name = "btnLogout";
-            btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnLogout.Size = new Size(180, 45);
             btnLogout.TabIndex = 8;
             btnLogout.Text = "Log Out";
+            btnLogout.Click += btnLogout_Click;
             // 
             // btnHelp
             // 
             btnHelp.BorderRadius = 10;
-            btnHelp.CustomizableEdges = customizableEdges27;
+            btnHelp.CustomizableEdges = customizableEdges3;
             btnHelp.DisabledState.BorderColor = Color.DarkGray;
             btnHelp.DisabledState.CustomBorderColor = Color.DarkGray;
             btnHelp.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -176,7 +188,7 @@
             btnHelp.Image = Properties.Resources.customer_301px;
             btnHelp.Location = new Point(12, 410);
             btnHelp.Name = "btnHelp";
-            btnHelp.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            btnHelp.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnHelp.Size = new Size(180, 45);
             btnHelp.TabIndex = 7;
             btnHelp.Text = "Help";
@@ -184,7 +196,7 @@
             // btnSuplier
             // 
             btnSuplier.BorderRadius = 10;
-            btnSuplier.CustomizableEdges = customizableEdges29;
+            btnSuplier.CustomizableEdges = customizableEdges5;
             btnSuplier.DisabledState.BorderColor = Color.DarkGray;
             btnSuplier.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSuplier.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -194,7 +206,7 @@
             btnSuplier.Image = Properties.Resources.group_301px;
             btnSuplier.Location = new Point(12, 341);
             btnSuplier.Name = "btnSuplier";
-            btnSuplier.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            btnSuplier.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnSuplier.Size = new Size(180, 45);
             btnSuplier.TabIndex = 6;
             btnSuplier.Text = "Suplier";
@@ -203,7 +215,7 @@
             // btnProducts
             // 
             btnProducts.BorderRadius = 10;
-            btnProducts.CustomizableEdges = customizableEdges31;
+            btnProducts.CustomizableEdges = customizableEdges7;
             btnProducts.DisabledState.BorderColor = Color.DarkGray;
             btnProducts.DisabledState.CustomBorderColor = Color.DarkGray;
             btnProducts.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -213,7 +225,7 @@
             btnProducts.Image = Properties.Resources.us_dollar_301px;
             btnProducts.Location = new Point(12, 275);
             btnProducts.Name = "btnProducts";
-            btnProducts.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            btnProducts.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnProducts.Size = new Size(180, 45);
             btnProducts.TabIndex = 5;
             btnProducts.Text = "Products";
@@ -222,7 +234,7 @@
             // btnDashboard
             // 
             btnDashboard.BorderRadius = 10;
-            btnDashboard.CustomizableEdges = customizableEdges33;
+            btnDashboard.CustomizableEdges = customizableEdges9;
             btnDashboard.DisabledState.BorderColor = Color.DarkGray;
             btnDashboard.DisabledState.CustomBorderColor = Color.DarkGray;
             btnDashboard.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -232,7 +244,7 @@
             btnDashboard.Image = (Image)resources.GetObject("btnDashboard.Image");
             btnDashboard.Location = new Point(12, 209);
             btnDashboard.Name = "btnDashboard";
-            btnDashboard.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            btnDashboard.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnDashboard.Size = new Size(180, 45);
             btnDashboard.TabIndex = 4;
             btnDashboard.Text = "Dashboard";
@@ -240,6 +252,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(textNameUser);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
@@ -249,14 +262,34 @@
             panel1.TabIndex = 3;
             panel1.Paint += panel1_Paint;
             // 
+            // textNameUser
+            // 
+            textNameUser.AutoSize = true;
+            textNameUser.Location = new Point(106, 159);
+            textNameUser.Name = "textNameUser";
+            textNameUser.Size = new Size(13, 20);
+            textNameUser.TabIndex = 5;
+            textNameUser.Text = " ";
+            textNameUser.Click += textNameUser_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.pic;
+            pictureBox1.Location = new Point(33, 6);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(146, 132);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 4;
+            pictureBox1.TabStop = false;
+            // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(3, 159);
+            label1.Location = new Point(33, 159);
             label1.Name = "label1";
-            label1.Size = new Size(93, 20);
+            label1.Size = new Size(67, 20);
             label1.TabIndex = 3;
-            label1.Text = "UserName: ";
+            label1.Text = "Admin : ";
             // 
             // imageList1
             // 
@@ -289,7 +322,7 @@
             // guna2TextBox1
             // 
             guna2TextBox1.BorderRadius = 20;
-            guna2TextBox1.CustomizableEdges = customizableEdges35;
+            guna2TextBox1.CustomizableEdges = customizableEdges11;
             guna2TextBox1.DefaultText = "";
             guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -304,7 +337,7 @@
             guna2TextBox1.PasswordChar = '\0';
             guna2TextBox1.PlaceholderText = "";
             guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges12;
             guna2TextBox1.Size = new Size(941, 287);
             guna2TextBox1.TabIndex = 15;
             // 
@@ -336,16 +369,6 @@
             panel5.Name = "panel5";
             panel5.Size = new Size(16, 279);
             panel5.TabIndex = 10;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.pic;
-            pictureBox1.Location = new Point(23, 13);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(165, 138);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 4;
-            pictureBox1.TabStop = false;
             // 
             // label4
             // 
@@ -427,8 +450,8 @@
             panel3.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            panelContainerForm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panelContainerForm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
@@ -465,5 +488,7 @@
         private Label label4;
         private PictureBox pictureBox5;
         private PictureBox pictureBox4;
+        private Label textNameUser;
+        private Panel panel6;
     }
 }

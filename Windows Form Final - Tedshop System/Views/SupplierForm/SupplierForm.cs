@@ -22,7 +22,7 @@ namespace Windows_Form_Final___Tedshop_System.Views.SupplierForm
 
         private void SupplierForm_Load(object sender, EventArgs e)
         {
-            RefreshProductList();
+            RefreshSupplierList();
         }
 
         private void UpdateDataGridProducts(List<Supplier> suppliers)
@@ -40,7 +40,7 @@ namespace Windows_Form_Final___Tedshop_System.Views.SupplierForm
 
 
 
-        public void RefreshProductList()
+        public void RefreshSupplierList()
         {
             List<Supplier> suppliers = supplierRepository.GetAllSuppliers();
             dataGridSupplier.Rows.Clear();
@@ -58,7 +58,76 @@ namespace Windows_Form_Final___Tedshop_System.Views.SupplierForm
 
         private void dataGridSupplier_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            string colName = dataGridSupplier.Columns[e.ColumnIndex].Name;
+            if (colName == "Edit")
+            {
+                int supplierId = Convert.ToInt32(dataGridSupplier.Rows[e.RowIndex].Cells["Supplier_ID"].Value);
+                Supplier supplierToEdit = supplierRepository.GetSupplierByID(supplierId);
+                if (supplierToEdit != null)
+                {
+                    SupplierModule supplierModule = new SupplierModule(supplierToEdit);
+                    if (supplierModule.ShowDialog() == DialogResult.OK)
+                    {
+                        RefreshSupplierList();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Supplier not found.");
+                }
+            }
+            if (colName == "Delete")
+            {
+                int supplierId = Convert.ToInt32(dataGridSupplier.Rows[e.RowIndex].Cells["Supplier_ID"].Value);
+                Supplier supplierToDelete = supplierRepository.GetSupplierByID(supplierId);
 
+                if (supplierToDelete != null)
+                {
+                    DialogResult result = MessageBox.Show("Are you sure you want to delete this product?", "Delete Product", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        int rowsAffected = supplierRepository.DeleteSupplier(supplierToDelete);
+                        if (rowsAffected > 0)
+                        {
+                            RefreshSupplierList();
+                            MessageBox.Show("Delete successful.");
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Delete failed.");
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Product not found.");
+                }
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            SupplierModule productModule = new SupplierModule(null);
+            if (productModule.ShowDialog() == DialogResult.OK)
+            {
+                RefreshSupplierList();
+            }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            string searchText = txtSearch.Text;
+            List<Supplier> filteredSupplier = supplierRepository.SearchForSupplierByName(searchText);
+            UpdateDataGridProducts(filteredSupplier);
+        }
+
+        private void btnResetFilter_Click(object sender, EventArgs e)
+        {
+            txtSearch.Text = "";
+
+            // Refresh the product list to its original state
+            RefreshSupplierList();
         }
     }
 }

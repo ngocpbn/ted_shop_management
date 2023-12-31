@@ -43,7 +43,7 @@
             txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             dataGridSupplier = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
-            Column7 = new DataGridViewTextBoxColumn();
+            Supplier_ID = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
             Column5 = new DataGridViewTextBoxColumn();
@@ -94,12 +94,13 @@
             btnResetFilter.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnResetFilter.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnResetFilter.ForeColor = Color.White;
-            btnResetFilter.Location = new Point(912, 16);
+            btnResetFilter.Location = new Point(892, 16);
             btnResetFilter.Name = "btnResetFilter";
             btnResetFilter.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnResetFilter.Size = new Size(60, 25);
             btnResetFilter.TabIndex = 30;
             btnResetFilter.Text = "Reset";
+            btnResetFilter.Click += btnResetFilter_Click;
             // 
             // btnAdd
             // 
@@ -110,6 +111,7 @@
             btnAdd.SizeMode = PictureBoxSizeMode.StretchImage;
             btnAdd.TabIndex = 26;
             btnAdd.TabStop = false;
+            btnAdd.Click += btnAdd_Click;
             // 
             // txtSearch
             // 
@@ -125,7 +127,7 @@
             txtSearch.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             txtSearch.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtSearch.IconLeft = (Image)resources.GetObject("txtSearch.IconLeft");
-            txtSearch.Location = new Point(676, 7);
+            txtSearch.Location = new Point(655, 10);
             txtSearch.Margin = new Padding(3, 4, 3, 4);
             txtSearch.Name = "txtSearch";
             txtSearch.PasswordChar = '\0';
@@ -134,6 +136,7 @@
             txtSearch.ShadowDecoration.CustomizableEdges = customizableEdges4;
             txtSearch.Size = new Size(220, 38);
             txtSearch.TabIndex = 0;
+            txtSearch.TextChanged += txtSearch_TextChanged;
             // 
             // dataGridSupplier
             // 
@@ -150,7 +153,7 @@
             dataGridSupplier.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridSupplier.ColumnHeadersHeight = 30;
             dataGridSupplier.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridSupplier.Columns.AddRange(new DataGridViewColumn[] { Column1, Column7, Column3, Column4, Column5, Column6, Edit, Delete });
+            dataGridSupplier.Columns.AddRange(new DataGridViewColumn[] { Column1, Supplier_ID, Column3, Column4, Column5, Column6, Edit, Delete });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(3, 172, 220);
             dataGridViewCellStyle2.Font = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
@@ -177,12 +180,12 @@
             Column1.Name = "Column1";
             Column1.Width = 53;
             // 
-            // Column7
+            // Supplier_ID
             // 
-            Column7.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            Column7.HeaderText = "Supplier ID";
-            Column7.Name = "Column7";
-            Column7.Width = 109;
+            Supplier_ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Supplier_ID.HeaderText = "Supplier ID";
+            Supplier_ID.Name = "Supplier_ID";
+            Supplier_ID.Width = 109;
             // 
             // Column3
             // 
@@ -256,7 +259,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private DataGridView dataGridSupplier;
         private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column7;
+        private DataGridViewTextBoxColumn Supplier_ID;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;

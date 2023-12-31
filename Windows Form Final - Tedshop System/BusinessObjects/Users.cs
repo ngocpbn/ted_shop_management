@@ -13,7 +13,7 @@ namespace Windows_Form_Final___Tedshop_System.BusinessObjects
         public int? u_id { get; set; }
 
         [StringLength(50)]
-        public string? u_fullname { get; set; }    
+        public string u_fullname { get; set; }    
         public  int? u_age { get; set; }
 
         [StringLength(50)]
