@@ -94,7 +94,7 @@
             btnResetFilter.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnResetFilter.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnResetFilter.ForeColor = Color.White;
-            btnResetFilter.Location = new Point(912, 16);
+            btnResetFilter.Location = new Point(901, 16);
             btnResetFilter.Name = "btnResetFilter";
             btnResetFilter.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnResetFilter.Size = new Size(60, 25);
@@ -105,7 +105,7 @@
             // comboBoxSize
             // 
             comboBoxSize.FormattingEnabled = true;
-            comboBoxSize.Location = new Point(809, 16);
+            comboBoxSize.Location = new Point(800, 16);
             comboBoxSize.Name = "comboBoxSize";
             comboBoxSize.Size = new Size(86, 25);
             comboBoxSize.TabIndex = 29;
@@ -115,7 +115,7 @@
             // comboBoxCategory
             // 
             comboBoxCategory.FormattingEnabled = true;
-            comboBoxCategory.Location = new Point(683, 16);
+            comboBoxCategory.Location = new Point(671, 16);
             comboBoxCategory.Name = "comboBoxCategory";
             comboBoxCategory.Size = new Size(113, 25);
             comboBoxCategory.TabIndex = 28;
@@ -155,7 +155,7 @@
             txtSearch.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             txtSearch.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtSearch.IconLeft = (Image)resources.GetObject("txtSearch.IconLeft");
-            txtSearch.Location = new Point(457, 9);
+            txtSearch.Location = new Point(445, 9);
             txtSearch.Margin = new Padding(3, 4, 3, 4);
             txtSearch.Name = "txtSearch";
             txtSearch.PasswordChar = '\0';

@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Windows_Form_Final___Tedshop_System.BusinessObjects;
+using Windows_Form_Final___Tedshop_System.Repository;
+using Windows_Form_Final___Tedshop_System.Views.SupplierForm;
 
 
 
@@ -15,15 +18,40 @@ namespace Windows_Form_Final___Tedshop_System.Views.Dashboard
 {
     public partial class Dashboard : Form
     {
+        private IUserRepository userRepository = new UserRepository();
         public Dashboard()
         {
             InitializeComponent();
-
         }
+
+
+        public void fetchData()
+        {
+            List<Users> users = userRepository.GetAllUsers();
+
+            // Assuming you want to display the name of the first user
+            if (users != null && users.Any())
+            {
+                UpdateLabelName(users.First().u_fullname);
+            }
+        }
+        private void DashboardUI_Load(object sender, EventArgs e)
+        {
+            fetchData();
+        }
+
+        private void UpdateLabelName(string userName)
+        {
+            textNameUser.Text = userName;
+        }
+
+
+
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
             openChildForm(new DashboardUI());
+            fetchData();
         }
 
         private void BtnClose_Click(object sender, EventArgs e)
@@ -51,8 +79,11 @@ namespace Windows_Form_Final___Tedshop_System.Views.Dashboard
 
         private void btnSuplier_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new Windows_Form_Final___Tedshop_System.Views.SupplierForm.SupplierForm());
         }
+
+
+
         private void panelContainerForm_Paint(object sender, PaintEventArgs e)
         {
 
@@ -104,6 +135,35 @@ namespace Windows_Form_Final___Tedshop_System.Views.Dashboard
         {
 
         }
+
+        private void textNameUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+    
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to log out?", "Log Out", MessageBoxButtons.YesNo);
+    
+            if (dialogResult == DialogResult.Yes)
+            {
+                
+                // User chose to log out
+
+                // Hide the dashboard
+                this.Hide();
+
+                // Create and show the login form
+                FormLogin loginForm = new FormLogin();
+                loginForm.ShowDialog();
+
+                // Close the dashboard after logging out
+                this.Close();
+            }
+            // If DialogResult is No, just return and do nothing
+        }
+
     }
 }
 
