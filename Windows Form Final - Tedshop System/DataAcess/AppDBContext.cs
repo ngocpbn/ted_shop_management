@@ -45,7 +45,18 @@ namespace Windows_Form_Final___Tedshop_System.DataAcess
         public virtual DbSet<Supplier> Supplier { get; set; }
         public virtual DbSet<Users> Users { get; set; }
 
-        public List<Users> GetAllUsers() => Instance.Users.ToList();
+        public List<Users> GetAllUsers()
+        {
+            try
+            {
+                return Instance.Users.ToList();
+
+            }catch (Exception ex) {
+                MessageBox.Show("Errow while retrieving data. See log for details.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                System.Diagnostics.Debug.WriteLine(ex.Message);
+                return new List<Users>() ;
+            }
+        }
         public int Login(Users user) {
             Users usr;
             try
@@ -110,7 +121,19 @@ namespace Windows_Form_Final___Tedshop_System.DataAcess
             return 1;
         }
         
-        public List<Product> GetAllProducts() => Instance.Product.ToList();
+        public List<Product> GetAllProducts() {
+            try
+            {
+                return Instance.Product.ToList();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Errow while retrieving data. See log for details.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                System.Diagnostics.Debug.WriteLine(ex.Message);
+                return new List<Product>();
+            }
+        
+        }
         public Product? GetProductByID(int productID)
         {
             try
@@ -119,6 +142,7 @@ namespace Windows_Form_Final___Tedshop_System.DataAcess
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Errow while retrieving data. See log for details.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 System.Diagnostics.Debug.WriteLine(ex.Message);
                 return null;
             }
@@ -196,7 +220,18 @@ namespace Windows_Form_Final___Tedshop_System.DataAcess
             return 1;
         }
 
-        public List<Supplier> GetAllSuppliers() => Instance.Supplier.ToList();
+        public List<Supplier> GetAllSuppliers()
+        {
+            try
+            {
+                return Instance.Supplier.ToList();
+            }
+            catch (Exception ex) {
+                MessageBox.Show("Errow while retrieving data. See log for details.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                System.Diagnostics.Debug.WriteLine(ex.Message);
+                return new List<Supplier>();
+            }
+        }
         public Supplier? GetSupplierByID(int id)
         {
             try
